@@ -30,6 +30,7 @@ Bundle 'shawncplus/phpcomplete.vim'
 Bundle '2072/PHP-Indenting-for-VIm'
 Bundle 'junegunn/vim-easy-align'
 Bundle 'skwp/vim-html-escape'
+Bundle 'terryma/vim-multiple-cursors'
 
 " syntax
 Bundle 'evidens/vim-twig'
