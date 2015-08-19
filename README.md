@@ -20,3 +20,12 @@ install [vundle](https://github.com/gmarik/vundle)
 run vim, and type the following command to install all plugins:
 
     :BundleInstall
+    
+注意
+--------
+1、UCM（Valloric/YouCompleteMe）插件是自动补全插件，是编译性插件。
+
+    cd ~/.vim/bundle/YouCompleteMe
+    ./install --clang-completer
+    
+    
