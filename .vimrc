@@ -42,6 +42,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/FuzzyFinder'
+Bundle 'Valloric/YouCompleteMe'
 
 filetype plugin indent on
 
