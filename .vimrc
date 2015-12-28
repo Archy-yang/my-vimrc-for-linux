@@ -43,6 +43,7 @@ Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/FuzzyFinder'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
@@ -87,5 +88,7 @@ let g:symfony_enable_shell_mapping=1
 let g:UltiSnipsDontReverseSearchPath=1
 
 let g:syntastic_php_checkers=['php', 'phpmd']
+
+let g:airline#extensions#tabline#enabled = 1
 
 " let g:debuggerPort = 10000
