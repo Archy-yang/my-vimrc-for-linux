@@ -3,10 +3,12 @@ filetype off
 set runtimepath+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'eshion/vim-sync'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 
@@ -23,7 +25,7 @@ Bundle 'mutewinter/nginx.vim'
 Bundle 'StanAngeloff/php.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'Townk/vim-autoclose'
-Bundle 'vim-scripts/XDebug-DBGp-client-for-PHP'
+" Bundle 'vim-scripts/XDebug-DBGp-client-for-PHP'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'docteurklein/vim-symfony'
 Bundle 'shawncplus/phpcomplete.vim'
@@ -42,7 +44,7 @@ Bundle 'scrooloose/syntastic'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'vim-scripts/L9'
 Bundle 'vim-scripts/FuzzyFinder'
-Bundle 'Valloric/YouCompleteMe'
+Bundle 'fatih/vim-go'
 Bundle 'bling/vim-airline'
 
 filetype plugin indent on
@@ -60,27 +62,34 @@ set incsearch
 set laststatus=2
 set wildmenu
 set wildmode=list:longest
-set wildignorecase
+" set wildignorecase
 set completeopt=longest,menu,preview
 set noswapfile
 set scrolloff=999
 set t_Co=256
 set iskeyword-=-$
-set foldmarker={,}
-set foldmethod=marker
+" set foldmarker={,}
+" set foldmethod=manual
+set hlsearch
+
+syntax on
 
 colorscheme pablo
 
 " for vim-php-namespace
 noremap <Leader>u :call PhpInsertUse()<CR>
 noremap <Leader>e :call PhpExpandClass()<CR>
+noremap <silent><F10> :TagbarToggle<cr>
+noremap <C-j> :NERDTree<CR>
+noremap <C-k> :NERDTreeClose<CR>
+
 
 vnoremap <silent> <Enter> :EasyAlign<cr>
 
 " w!! to sudo save
 cmap w!! %!sudo tee > /dev/null %
 
-autocmd BufWritePost *.php,*.twig,*.yml execute 'silent !php-cs-fixer fix % > /dev/null'
+" autocmd BufWritePost *.php,*.twig,*.yml execute 'silent !php-cs-fixer fix % > /dev/null'
 autocmd BufWritePost *.php,*.twig,*.yml execute 'e'
 autocmd BufWritePost *.php,*.twig,*.yml execute 'syntax on'
 
@@ -90,5 +99,9 @@ let g:UltiSnipsDontReverseSearchPath=1
 let g:syntastic_php_checkers=['php', 'phpmd']
 
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_idx_mode = 1
+nmap <leader>1 <Plug>AirlineSelectTab1
 
 " let g:debuggerPort = 10000
