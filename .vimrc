@@ -96,10 +96,11 @@ autocmd BufWritePost *.php,*.twig,*.yml execute 'syntax on'
 
 let g:symfony_enable_shell_mapping=1
 let g:UltiSnipsDontReverseSearchPath=1
+let g:NERDTreeWinSize=25
 
 let g:syntastic_php_checkers=['php', 'phpmd']
 
-let g:airline#extensions#tabline#enabled = 1
+" let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 " let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
