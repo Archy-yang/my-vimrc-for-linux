@@ -16,7 +16,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'SirVer/ultisnips'
-Bundle 'chrisyue/vim-snippets'
+Bundle 'honza/vim-snippets'
 "Bundle 'garbas/vim-snipmate' " original
 Bundle 'gregsexton/MatchTag'
 Bundle 'othree/html5.vim'
@@ -72,6 +72,7 @@ set iskeyword-=-$
 " set foldmarker={,}
 " set foldmethod=manual
 set hlsearch
+set backspace=indent,eol,start
 
 syntax on
 
